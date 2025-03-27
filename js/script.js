@@ -46,3 +46,10 @@ function generateRandomNumbers(min,max) {
 }
 const numbers = generateRandomNumbers(1, 50);
 console.log(numbers);
+
+//creo una lista di numeri random
+for(let i = 0; i<numbers.length; i++) {
+    const listItem = document.createElement('li');
+    listItem.innerText = numbers[i];
+    numeriRandom.appendChild(listItem);
+}
