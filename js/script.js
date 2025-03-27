@@ -32,3 +32,17 @@ const timer = setInterval(() => {
         countdown.innerHTML = 'Tempo scaduto'; // Mostra il messaggio di fine countdown
     }
 }, 1000);
+
+//Riprendo i numeri da generare e inserire randomicamente
+
+function generateRandomNumbers(min,max) {
+    const numeri = [];
+    const numeriArray = 5;
+    for(let i = 0; i < numeriArray; i++) {
+        let random = Math.floor(Math.random() * (max - min + 1) + min);
+        numeri.push(random);
+    }
+    return numeri;
+}
+const numbers = generateRandomNumbers(1, 50);
+console.log(numbers);
