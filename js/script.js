@@ -67,3 +67,15 @@ form.addEventListener('submit', (event) => {
             userNumbers.push(value);
         }
     });
+
+    const correctNumbers = numbers.filter(num => userNumbers.includes(num));
+    
+    if (correctNumbers.length === numbers.length) {
+        istructions.innerText = 'Complimenti! Hai indovinato tutti i numeri!';
+    } else {
+        istructions.innerText = `Hai indovinato ${correctNumbers.length} numeri su ${numbers.length}. I numeri corretti erano: ${numbers.join(', ')}`;
+    }
+
+    istructions.classList.remove('d-none'); // Mostra il messaggio
+    form.classList.add('d-none'); // Nasconde il form
+});
