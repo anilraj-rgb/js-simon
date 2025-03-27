@@ -15,3 +15,7 @@
 input {
 	width: 80px !important;
 }
+
+body {
+	background-color: lightgrey;
+}
