@@ -53,3 +53,17 @@ for(let i = 0; i<numbers.length; i++) {
     listItem.innerText = numbers[i];
     numeriRandom.appendChild(listItem);
 }
+
+// Aggiungo event listener al form
+form.addEventListener('submit', (event) => {
+    event.preventDefault(); 
+
+    const userNumbers = [];
+    const inputs = form.querySelectorAll('input');
+
+    inputs.forEach(input => {
+        const value = parseInt(input.value);
+        if (!isNaN(value)) {
+            userNumbers.push(value);
+        }
+    });
